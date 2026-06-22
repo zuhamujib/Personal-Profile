@@ -56,6 +56,37 @@ body {
     color: #00bcd4;
 }
 
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-links li {
+    display: inline-block;
+}
+
+.social-links a {
+    color: white;
+    font-size: 22px;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.social-links a:hover {
+    color: #00bcd4;
+}
+
 .container {
     max-width: 1000px;
     margin: 0 auto;
