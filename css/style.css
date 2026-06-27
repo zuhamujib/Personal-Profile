@@ -16,8 +16,24 @@ body {
 }
 
 .home {
-    text-align: center;
-    padding: 100px 20px;
+    text-align: left;
+    padding-top: 350px;
+    padding-bottom: 150px;
+    padding-left: 120px;
+    padding-right: 800px;
+}
+
+.home h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.home p {
+    font-size: 15px;
+    color: #878181;
+    line-height: 1.5;
+    font-family: "Lucida Sans Typewriter", sans-serif;
+    text-align: justify;
 }
 
 .navbar {
@@ -103,4 +119,27 @@ body {
     margin-top: 50px;
     margin-left: 100px;
     margin-right: 100px;
+}
+
+.home-links {
+    background-color: #e6e6e6;
+    flex-direction: column;
+    display: grid;
+    gap: 20px;
+}
+
+.card {
+    color: #000000;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 100px 20px;
+    padding-left: 120px;
+}
+
+.card:hover {
+    background-color: #ffffff;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 100px 20px;
+    padding-left: 120px;
 }
