@@ -13,8 +13,8 @@ html {
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
-    color: #222;
-    background-color: #ffffff;
+    color: #1a1a1a;
+    background-color: #f5f5f3;
     line-height: 1.6;
 }
 
@@ -22,6 +22,8 @@ h1,
 h2,
 h3 {
     font-family: 'Space Grotesk', sans-serif;
+    color: #111111;
+    margin-top: 0;
 }
 
 a {
@@ -49,31 +51,36 @@ img {
    ======================================== */
 
 .section {
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .section-light {
-    background-color: #f7f7f7;
+    background-color: #ededeb;
 }
 
 .section-title {
-    margin: 0 0 40px;
+    margin: 0 0 50px;
     text-align: center;
-    font-size: 30px;
+
+    font-size: 32px;
     line-height: 1.2;
+    letter-spacing: -0.5px;
 }
 
+
 /* ========================================
-    REUSABLE COMPONENTS
+   REUSABLE COMPONENTS
    ======================================== */
 
 .text-link {
-    color: #0066cc;
+    color: #222222;
     text-decoration: none;
+    border-bottom: 1px solid #999999;
+    transition: border-color 0.2s ease;
 }
 
 .text-link:hover {
-    text-decoration: underline;
+    border-color: #111111;
 }
 
 
@@ -81,9 +88,34 @@ img {
    NAVIGATION BAR
    ======================================== */
 
+#navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
 .navbar {
-    background-color: #222;
+    background-color: #181818;
     color: #ffffff;
+
+    border-bottom: 1px solid #2a2a2a;
+    transition: background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: rgba(17, 17, 17, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .navbar-container {
@@ -99,14 +131,16 @@ img {
 .logo {
     color: #ffffff;
     text-decoration: none;
+
     font-size: 22px;
     font-weight: 700;
+    letter-spacing: -0.5px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 32px;
 
     list-style: none;
     margin: 0;
@@ -114,15 +148,15 @@ img {
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #cccccc;
     text-decoration: none;
-    font-size: 15px;
 
+    font-size: 14px;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #00bcd4;
+    color: #ffffff;
 }
 
 
@@ -132,33 +166,42 @@ img {
 
 .home {
     min-height: 100vh;
+
     padding: 120px 0 100px;
-    padding-right: 100px;
+
     display: flex;
     align-items: center;
+
+    background-color: #111111;
+    color: #ffffff;
 }
 
 .home-content {
-    max-width: 800px;
+    max-width: 850px;
 }
 
 .home h1 {
-    margin: 0 0 24px;
+    margin: 0 0 28px;
 
-    font-size: clamp(40px, 6vw, 64px);
-    line-height: 1.1;
+    color: #ffffff;
+
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.05;
     font-weight: 700;
+    letter-spacing: -2px;
 }
 
 .home p {
     max-width: 680px;
 
-    margin: 0 0 32px;
+    margin: 0 0 36px;
 
-    color: #666;
+    color: #bdbdbd;
+
     font-size: 18px;
     line-height: 1.7;
 }
+
 
 /* ========================================
    BUTTONS
@@ -166,41 +209,93 @@ img {
 
 .button-group {
     display: flex;
-    gap: 14px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
 .button {
     display: inline-block;
 
-    padding: 11px 20px;
+    padding: 12px 22px;
 
-    border: 1px solid #222;
-    border-radius: 4px;
+    border: 1px solid #ffffff;
+    border-radius: 6px;
 
-    background-color: #222;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #111111;
 
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 500;
 
     transition:
         background-color 0.2s ease,
-        color 0.2s ease;
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .button:hover {
-    background-color: #444;
+    background-color: #dddddd;
+    transform: translateY(-2px);
 }
 
 .button-secondary {
-    background-color: #ffffff;
-    color: #222;
+    background-color: transparent;
+    color: #ffffff;
 }
 
 .button-secondary:hover {
-    background-color: #f3f3f3;
+    background-color: #222222;
+    color: #ffffff;
 }
+
+
+/* ========================================
+   CARDS
+   ======================================== */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.card {
+    padding: 28px;
+
+    border: 1px solid #d7d7d5;
+    border-radius: 10px;
+
+    background-color: #f9f9f7;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #aaaaaa;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+    margin: 0 0 12px;
+
+    font-size: 19px;
+    letter-spacing: -0.2px;
+}
+
+.card p {
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 15px;
+    line-height: 1.6;
+}
+
 
 /* ========================================
    FEATURED PROJECTS
@@ -212,16 +307,27 @@ img {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 20px;
 }
 
 .project-card {
-    padding: 28px;
+    padding: 30px;
 
-    border: 1px solid #e1e1e1;
-    border-radius: 6px;
+    border: 1px solid #d7d7d5;
+    border-radius: 10px;
 
     background-color: #ffffff;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: #999999;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
 }
 
 .project-card h3 {
@@ -229,62 +335,62 @@ img {
 }
 
 .project-card p {
-    color: #666;
+    color: #666666;
 }
 
 .project-card a {
-    color: #0066cc;
+    color: #222222;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .project-card a:hover {
-    text-decoration: underline;
-}
-
-.view-all-projects {
-    margin-top: 32px;
-    text-align: center;
-}
-
-.view-all-projects a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-.view-all-projects a:hover {
-    text-decoration: underline;
+    color: #666666;
 }
 
 /* ========================================
-   INTERESTS
+   WHAT I BUILD WITH
    ======================================== */
 
-.interest-list {
-    max-width: 850px;
+.build-with {
+    background-color: #f5f5f3;
 }
 
-.interest-item {
-    padding: 24px 0;
-    border-bottom: 1px solid #dddddd;
+.build-with .section-title {
+    margin-bottom: 28px;
 }
 
-.interest-item:first-child {
-    padding-top: 0;
+.build-with-list {
+    max-width: 900px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.interest-item:last-child {
-    border-bottom: none;
+.build-with-list span {
+    padding: 9px 16px;
+
+    border: 1px solid #d6d6d6;
+    border-radius: 20px;
+
+    background-color: #ffffff;
+    color: #333333;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
 }
 
-.interest-item h3 {
-    margin: 0 0 8px;
-    font-size: 20px;
-}
-
-.interest-item p {
-    max-width: 700px;
-    margin: 0;
-    color: #666;
+.build-with-list span:hover {
+    background-color: #eeeeec;
+    border-color: #bdbdbd;
+    color: #111111;
 }
 
 /* ========================================
@@ -292,7 +398,7 @@ img {
    ======================================== */
 
 .about {
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .about-intro {
@@ -310,10 +416,11 @@ img {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid #d5d5d5;
+    border: 1px solid #d0d0ce;
+    border-radius: 10px;
 
-    background-color: #f3f3f3;
-    color: #777;
+    background-color: #e5e5e3;
+    color: #777777;
 
     text-align: center;
     font-size: 14px;
@@ -322,40 +429,162 @@ img {
 .pronunciation {
     margin-top: -15px;
 
-    color: #666;
+    color: #666666;
     font-size: 14px;
 }
-
 
 /* ========================================
-   SKILLS
+   EXPERIENCE PREVIEW
    ======================================== */
 
-.skill-group {
-    margin-bottom: 30px;
+.experience-preview {
+    background-color: #ffffff;
 }
 
-.skill-group h3 {
-    margin-bottom: 12px;
+.experience-preview-content {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.skills {
+.experience-link {
+    display: block;
+    padding: 10px 0 30px;
+
+    color: inherit;
+    text-decoration: none;
+
+    border-bottom: 1px solid #dcdcdc;
+
+    transition: border-color 0.2s ease;
+}
+
+.experience-link:hover {
+    border-color: #999999;
+}
+
+.experience-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.experience-header h3 {
+    margin: 0;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #111111;
+
+    transition: color 0.2s ease;
+}
+
+.experience-link:hover .experience-header h3 {
+    color: #444444;
+}
+
+.experience-company {
+    margin: 7px 0 0;
+
+    font-size: 18px;
+    font-weight: 600;
+    color: #555555;
+}
+
+.experience-date {
+    margin: 4px 0 0;
+
+    color: #777777;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.experience-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 9px;
+    margin: 24px 0 20px;
 }
 
-.skills span {
-    display: inline-block;
+.experience-skills span {
+    padding: 7px 13px;
 
-    padding: 6px 10px;
-
-    border: 1px solid #d8d8d8;
-    border-radius: 4px;
+    border: 1px solid #d5d5d5;
+    border-radius: 20px;
 
     background-color: #f7f7f7;
+    color: #444444;
 
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.experience-description {
+    max-width: 750px;
+    margin: 0;
+
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.experience-cta {
+    margin-top: 24px;
+
+    color: #333333;
     font-size: 14px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.experience-cta span {
+    display: inline-block;
+    margin-left: 5px;
+
+    transition: transform 0.2s ease;
+}
+
+.experience-link:hover .experience-cta {
+    color: #111111;
+}
+
+.experience-link:hover .experience-cta span {
+    transform: translateX(4px);
+}
+
+/* ========================================
+   ALL PROJECTS LINK
+   ======================================== */
+
+.projects-link {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.projects-link a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.projects-link span {
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.2s ease;
+}
+
+.projects-link a:hover {
+    color: #111111;
+}
+
+.projects-link a:hover span {
+    transform: translateX(4px);
 }
 
 /* ========================================
@@ -365,12 +594,12 @@ img {
 .footer {
     margin-top: 80px;
 
-    background-color: #222;
+    background-color: #111111;
     color: #ffffff;
 }
 
 .footer-container {
-    padding: 28px 0;
+    padding: 32px 0;
 
     display: flex;
     flex-direction: column;
@@ -381,27 +610,29 @@ img {
 .footer-description {
     display: flex;
     align-items: center;
-
     justify-content: center;
     gap: 20px;
 }
 
 .footer-description p {
     margin: 0;
+
     font-size: 15px;
     color: #cccccc;
 }
 
 .copyright {
     font-size: 12px;
+    color: #777777;
 }
 
 .social-links {
     display: flex;
     justify-content: center;
 
-    gap: 30px;
+    gap: 28px;
     align-items: center;
+
     list-style: none;
     margin: 0;
     padding: 0;
@@ -409,13 +640,16 @@ img {
 
 .social-links a {
     color: #ffffff;
-    font-size: 30px;
+    font-size: 28px;
 
-    transition: color 0.2s ease;
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .social-links a:hover {
-    color: #00bcd4;
+    color: #bbbbbb;
+    transform: translateY(-2px);
 }
 
 
@@ -443,6 +677,14 @@ img {
         padding: 80px 0;
     }
 
+    .home h1 {
+        letter-spacing: -1px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
     .project-grid {
         grid-template-columns: 1fr;
     }
@@ -465,5 +707,22 @@ img {
     .footer-container {
         flex-direction: column;
         text-align: center;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .experience-header h3 {
+        font-size: 27px;
+    }
+
+    .experience-date {
+        white-space: normal;
+    }
+
+    .experience-skills {
+        margin-top: 20px;
     }
 }
