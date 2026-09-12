@@ -11,11 +11,18 @@
     <link rel="stylesheet" href="css/style.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div id="navbar"></div>
-    
+
     <main>
 
         <section class="home">
@@ -33,23 +40,11 @@
                         engineering solutions that connect software with
                         physical systems.
                     </p>
-
-                    <div class="button-group">
-                        <a href="projects.html" class="button">
-                            View Projects
-                        </a>
-
-                        <a href="experience.html" class="button button-secondary">
-                            View Experience
-                        </a>
-                    </div>
-
                 </div>
             </div>
         </section>
 
-
-        <!-- Areas of interest -->
+        <!--Areas for Interest-->
         <section class="section section-light">
 
             <div class="container">
@@ -58,37 +53,37 @@
                     Areas of Interest
                 </h2>
 
-                <div class="card-grid">
+                <div class="interest-list">
 
-                    <div class="card">
+                    <div class="interest-item">
                         <h3>Embedded Systems</h3>
                         <p>
-                            Firmware, microcontrollers, RTOS,
-                            and software running on real hardware.
+                            Firmware, microcontrollers, RTOS, and software
+                            running on physical hardware.
                         </p>
                     </div>
 
-                    <div class="card">
-                        <h3>Hardware Systems</h3>
+                    <div class="interest-item">
+                        <h3>Hardware & Digital Systems</h3>
                         <p>
-                            Digital systems, circuit design,
-                            debugging, and hardware-software integration.
+                            Circuit design, digital systems, debugging,
+                            and hardware-software integration.
                         </p>
                     </div>
 
-                    <div class="card">
-                        <h3>Robotics</h3>
+                    <div class="interest-item">
+                        <h3>Robotics & Autonomous Systems</h3>
                         <p>
-                            Sensors, control, navigation, and
-                            embedded systems for autonomous machines.
+                            Sensors, motor control, navigation, and embedded
+                            systems for autonomous machines.
                         </p>
                     </div>
 
-                    <div class="card">
-                        <h3>Computer Systems</h3>
+                    <div class="interest-item">
+                        <h3>Intelligent Sensing</h3>
                         <p>
-                            Operating systems, computer architecture,
-                            concurrency, and low-level software.
+                            Computer vision, machine learning, and sensing
+                            systems for real-world applications.
                         </p>
                     </div>
 
@@ -97,67 +92,66 @@
             </div>
 
         </section>
-
-
-        <!-- Featured projects -->
+        <!-- Experience -->
         <section class="section">
 
             <div class="container">
-
                 <h2 class="section-title">
-                    Featured Projects
+                    Experience
                 </h2>
 
-                <div class="card-grid">
+                <p>
+                    Embedded Developer Intern at Geotab.
+                </p>
 
-                    <div class="card">
-                        <h3>Automatic License Plate Recognition</h3>
-                        <p>
-                            Deep learning system for license plate
-                            detection and character recognition.
-                        </p>
+                <a href="experience.html">
+                    View Experience →
+                </a>
 
-                        <a href="projects.html">
-                            Learn more →
-                        </a>
-                    </div>
+            </div>
 
-                    <div class="card">
-                        <h3>Autonomous Rover</h3>
-                        <p>
-                            Embedded robotics project involving
-                            motor control, GPS, sensors, and hardware.
-                        </p>
 
-                        <a href="projects.html">
-                            Learn more →
-                        </a>
-                    </div>
+        </section>
+        <!-- Projects -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">
+                    Projects
+                </h2>
 
-                    <div class="card">
+                <div class="project-grid">
+
+                    <div class="project-card">
                         <h3>Colour Yeeter</h3>
                         <p>
-                            STM32-based embedded system combining
-                            computer vision and motor control.
+                            STM32-based conveyor system using computer vision
+                            to classify objects by colour and control a motorized pusher.
                         </p>
-
-                        <a href="projects.html">
-                            Learn more →
-                        </a>
+                        <a href="projects.html#colour-yeeter" class="text-link">Learn more →</a>
                     </div>
 
-                    <div class="card">
+                    <div class="project-card">
+                        <h3>Automatic License Plate Recognition</h3>
+                        <p>
+                            Deep learning system combining license plate detection
+                            with character recognition.
+                        </p>
+                        <a href="projects.html#alpr" class="text-link">Learn more →</a>
+                    </div>
+
+                    <div class="project-card">
                         <h3>BasketBlitz</h3>
                         <p>
-                            Two-player embedded game implemented
-                            on a DE1-SoC using C and Nios II.
+                            Two-player basketball game developed in C for the
+                            DE1-SoC with real-time controls and VGA output.
                         </p>
-
-                        <a href="projects.html">
-                            Learn more →
-                        </a>
+                        <a href="projects.html#basketblitz" class="text-link">Learn more →</a>
                     </div>
 
+                </div>
+
+                <div class="view-all-projects">
+                    <a href="projects.html" class="text-link">View all projects →</a>
                 </div>
 
             </div>
