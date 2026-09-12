@@ -1,38 +1,177 @@
-<!-- home page -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Home</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zuha Mujib | Electrical Engineering</title>
+
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Loading the navigation bar -->
     <div id="navbar"></div>
+    
+    <main>
 
-    <section class="home">
-        <h1>Building intelligent hardware systems and real-world machines</h1>
-        <p>Hi! I am Zuha, an Electrical Engineering student at the University of Toronto (St. George).
-            I'm interested in hardware systems, embedded computing, and building real-world engineering solutions.
-        </p> Note: this site is still under construction, and I will be adding more content soon.
-    </section>
+        <section class="home">
+            <div class="container">
+                <div class="home-content">
 
-    <section class="home-links">
-        <a href="experience.html" class="card">
-            <h1>Experience</h1>
-            <p>Check out my work experience and projects</p>
-        </a>
-        <a href="projects.html" class="card">
-            <h1>Projects</h1>
-            <p>Explore my personal and academic projects</p>
-        </a>
-    </section>
+                    <h1>
+                        Building intelligent hardware systems and real-world machines
+                    </h1>
 
+                    <p>
+                        Hi, I'm Zuha, a fourth-year Electrical Engineering
+                        student at the University of Toronto (St. George). I'm interested
+                        in hardware, embedded computing, robotics, and building
+                        engineering solutions that connect software with
+                        physical systems.
+                    </p>
+
+                    <div class="button-group">
+                        <a href="projects.html" class="button">
+                            View Projects
+                        </a>
+
+                        <a href="experience.html" class="button button-secondary">
+                            View Experience
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Areas of interest -->
+        <section class="section section-light">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Areas of Interest
+                </h2>
+
+                <div class="card-grid">
+
+                    <div class="card">
+                        <h3>Embedded Systems</h3>
+                        <p>
+                            Firmware, microcontrollers, RTOS,
+                            and software running on real hardware.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Hardware Systems</h3>
+                        <p>
+                            Digital systems, circuit design,
+                            debugging, and hardware-software integration.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Robotics</h3>
+                        <p>
+                            Sensors, control, navigation, and
+                            embedded systems for autonomous machines.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Computer Systems</h3>
+                        <p>
+                            Operating systems, computer architecture,
+                            concurrency, and low-level software.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Featured projects -->
+        <section class="section">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Featured Projects
+                </h2>
+
+                <div class="card-grid">
+
+                    <div class="card">
+                        <h3>Automatic License Plate Recognition</h3>
+                        <p>
+                            Deep learning system for license plate
+                            detection and character recognition.
+                        </p>
+
+                        <a href="projects.html">
+                            Learn more →
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <h3>Autonomous Rover</h3>
+                        <p>
+                            Embedded robotics project involving
+                            motor control, GPS, sensors, and hardware.
+                        </p>
+
+                        <a href="projects.html">
+                            Learn more →
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <h3>Colour Yeeter</h3>
+                        <p>
+                            STM32-based embedded system combining
+                            computer vision and motor control.
+                        </p>
+
+                        <a href="projects.html">
+                            Learn more →
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <h3>BasketBlitz</h3>
+                        <p>
+                            Two-player embedded game implemented
+                            on a DE1-SoC using C and Nios II.
+                        </p>
+
+                        <a href="projects.html">
+                            Learn more →
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer is loaded by JavaScript -->
     <div id="footer"></div>
 
-    <!-- JAVASCRIPT -->
+
+    <!-- JavaScript -->
     <script src="js/script.js"></script>
 
 </body>

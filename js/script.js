@@ -1,19 +1,11 @@
-console.log("JS is running");
+fetch("components/navbar.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("navbar").innerHTML = data;
+    });
 
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("DOM loaded");
-
-    fetch("components/navbar.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("navbar").innerHTML = data;
-        })
-        .catch(err => console.error(err));
-
-    fetch("components/footer.html")
-        .then(res => res.text())
-        .then(data => {
-            document.getElementById("footer").innerHTML = data;
-        })
-        .catch(err => console.error(err));
-});
+fetch("components/footer.html")
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById("footer").innerHTML = data;
+    });
