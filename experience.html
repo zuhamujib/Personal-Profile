@@ -1,20 +1,120 @@
-<!-- My Experiences page -->
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>My Experiences</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
-    <!-- Loading the navigation bar -->
+<body class="experience-page">
     <div id="navbar"></div>
-    <p>My experiences page is currently under construction. Please check back later for updates!</p>
+
+    <main class="experience-page-content">
+        <header class="experience-page-header">
+            <p class="experience-eyebrow">PROFESSIONAL EXPERIENCE</p>
+            <h1>My Experience<span class="title-period">.</span></h1>
+        </header>
+
+        <div class="experience-list">
+            <!-- Copy this article to add another role. -->
+            <article class="experience-entry">
+                <header class="experience-entry-header">
+                    <div class="experience-entry-row">
+                        <h2>Embedded Developer Intern</h2>
+                        <p class="experience-meta">May 2025 &ndash; April 2026</p>
+                    </div>
+                    <div class="experience-entry-row">
+                        <p class="experience-company">Geotab</p>
+                        <p class="experience-meta">Oakville, Ontario</p>
+                    </div>
+                </header>
+
+                <div class="experience-entry-body">
+                    <section class="experience-section">
+                        <h3>Role and Responsibilities</h3>
+                        <p>
+                            Worked on embedded firmware for Geotab&rsquo;s connected
+                            vehicle devices, with a focus on GNSS behavior, device
+                            reliability, and firmware verification.
+                        </p>
+                        <ul>
+                            <li>Developed and debugged firmware features and fixes in an embedded systems environment.
+                            </li>
+                            <li>Investigated GNSS time-to-first-fix, movement detection, harsh driving, connectivity,
+                                resets, and modem heartbeat behavior.</li>
+                            <li>Supported firmware testing and verification on internal Geotab devices.</li>
+                        </ul>
+                    </section>
+
+                    <section class="experience-section">
+                        <h3>Team</h3>
+                        <p>
+                            Worked with the GNSS firmware team and contributed to
+                            GOdevice verification tools, including the firmware log
+                            analysis tool used to investigate device behavior.
+                        </p>
+                    </section>
+
+                    <section class="experience-section">
+                        <h3>Key Contributions</h3>
+                        <ul>
+                            <li>
+                                <strong>Embedded Firmware Log Analysis Tool:</strong>
+                                Developed and maintained a Python-based tool using
+                                BigQuery SQL and GitLab CI/CD to analyze embedded-device
+                                firmware logs and investigate GNSS, connectivity,
+                                movement, modem heartbeat, reset, and GNSS aiding behavior.
+                            </li>
+                            <li>
+                                <strong>IMU Parity Validation &mdash; Trinity:</strong>
+                                Contributed to validating inertial measurement data
+                                across the Trinity implementation.
+                            </li>
+                            <li>
+                                <strong>GNSS Ghost Trip Fix:</strong>
+                                Investigated and fixed ghost trips caused by an
+                                <code>EVENT_IGN_CHANGE</code> race condition in embedded
+                                event handling.
+                            </li>
+                            <li>
+                                <strong>UART Receive Buffer Optimization:</strong>
+                                Increased a UART receive buffer from 256 to 1,024
+                                units to improve serial-data handling and observed a
+                                roughly 3.9&times; checksum-related measurement spike.
+                            </li>
+                            <li>
+                                <strong>RTOS Stack-Memory Optimization:</strong>
+                                Adjusted embedded RTOS stack allocation as part of
+                                NuttX-based firmware reliability work.
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="experience-section">
+                        <h3>Recognition</h3>
+                        <p>
+                            <strong>Intern of the Month &mdash; November 2025:</strong>
+                            Recognized following the successful deployment and testing
+                            of firmware on internal Geotab devices, using the log
+                            analysis tool to validate the new firmware.
+                        </p>
+                    </section>
+                </div>
+            </article>
+        </div>
+    </main>
+
     <div id="footer"></div>
 
-    <!-- JAVASCRIPT -->
     <script src="js/script.js"></script>
+</body>
 
 </html>
