@@ -37,29 +37,32 @@
                     </div>
                 </header>
 
+
                 <div class="experience-entry-body">
                     <section class="experience-section">
                         <h3>Role and Responsibilities</h3>
                         <p>
-                            Worked on embedded firmware for Geotab&rsquo;s connected
-                            vehicle devices, with a focus on GNSS behavior, device
-                            reliability, and firmware verification.
+                            The role involved developing and maintaining embedded firmware across
+                            multiple hardware platforms and software environments, including GNSS,
+                            IMU sensor integration, RTOS functionality, and platform-level services.
+                            I also investigated firmware defects, optimized system reliability and
+                            memory usage, and contributed to automated testing and analysis tools
+                            to support firmware validation and cross-platform compatibility.
                         </p>
-                        <ul>
-                            <li>Developed and debugged firmware features and fixes in an embedded systems environment.
-                            </li>
-                            <li>Investigated GNSS time-to-first-fix, movement detection, harsh driving, connectivity,
-                                resets, and modem heartbeat behavior.</li>
-                            <li>Supported firmware testing and verification on internal Geotab devices.</li>
-                        </ul>
                     </section>
 
                     <section class="experience-section">
-                        <h3>Team</h3>
+                        <h3>Technical Scope</h3>
                         <p>
-                            Worked with the GNSS firmware team and contributed to
-                            GOdevice verification tools, including the firmware log
-                            analysis tool used to investigate device behavior.
+                            Worked across the embedded software stack, from low-level peripheral
+                            drivers and hardware abstraction to RTOS-based services, sensor
+                            integration, and application-level firmware. Contributed to firmware
+                            running across different hardware platforms and operating
+                            environments, including NuttX RTOS and Linux-based simulation.
+                            Combined firmware debugging, production telemetry analysis,
+                            automated testing, and performance optimization to diagnose
+                            system-level issues and improve reliability across hardware and
+                            software configurations.
                         </p>
                     </section>
 
@@ -67,47 +70,43 @@
                         <h3>Key Contributions</h3>
                         <ul>
                             <li>
-                                <strong>Embedded Firmware Log Analysis Tool:</strong>
-                                Developed and maintained a Python-based tool using
-                                BigQuery SQL and GitLab CI/CD to analyze embedded-device
-                                firmware logs and investigate GNSS, connectivity,
-                                movement, modem heartbeat, reset, and GNSS aiding behavior.
+                                Designed and maintained an automated firmware log analysis pipeline using Python,
+                                BigQuery, and scheduled GitLab CI/CD jobs to monitor GNSS, movement detection, harsh
+                                driving, modem health, connectivity, resets, and aiding behavior, enabling repeatable
+                                per-trip regression analysis across configurable devices, firmware versions, and time
+                                windows.
                             </li>
                             <li>
-                                <strong>IMU Parity Validation &mdash; Trinity:</strong>
-                                Contributed to validating inertial measurement data
-                                across the Trinity implementation.
+                                Eliminated GPS tracking gaps caused by UART receive-buffer overflows by tracing a 3.9×
+                                increase in GPS checksum failures and increasing GNSS and BLE buffers from 256 to 1,024
+                                bytes, preventing mid-message data loss.
                             </li>
                             <li>
-                                <strong>GNSS Ghost Trip Fix:</strong>
-                                Investigated and fixed ghost trips caused by an
-                                <code>EVENT_IGN_CHANGE</code> race condition in embedded
-                                event handling.
+                                Resolved inaccurate GNSS hotstart failure reporting by identifying a counter that
+                                accumulated incorrectly across power cycles and validating the correction with unit
+                                testing, addressing inflated failure reporting affecting 11.59% of monitored devices.
                             </li>
                             <li>
-                                <strong>UART Receive Buffer Optimization:</strong>
-                                Increased a UART receive buffer from 256 to 1,024
-                                units to improve serial-data handling and observed a
-                                roughly 3.9&times; checksum-related measurement spike.
-                            </li>
-                            <li>
-                                <strong>RTOS Stack-Memory Optimization:</strong>
-                                Adjusted embedded RTOS stack allocation as part of
-                                NuttX-based firmware reliability work.
+                                Expanded automated integration and hardware validation coverage by extending tests for
+                                RTOS sleep/wakeup transitions, implementing GPS hardware-in-the-loop trip emulation, and
+                                designing cross-platform IMU parity tests, improving regression testing without relying
+                                solely on physical field testing.
                             </li>
                         </ul>
                     </section>
 
                     <section class="experience-section">
                         <h3>Recognition</h3>
+
+                        <h4>Intern of the Month - November 2025</h4>
                         <p>
-                            <strong>Intern of the Month &mdash; November 2025:</strong>
-                            Recognized following the successful deployment and testing
-                            of firmware on internal Geotab devices, using the log
-                            analysis tool to validate the new firmware.
+                            Recognized for contributions to embedded firmware development, automated validation, and
+                            device reliability, including leveraging firmware log analysis to verify system behavior and
+                            support regression testing on internal devices.
                         </p>
                     </section>
                 </div>
+
             </article>
         </div>
     </main>
