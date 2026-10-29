@@ -743,7 +743,7 @@ img {
     margin: 0;
     color: #111;
     font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(1.7rem, 4vw, 2.5rem);
+    font-size: clamp(1.1rem, 2.5vw, 2rem);
     letter-spacing: -0.04em;
     line-height: 1.2;
 }
@@ -809,10 +809,6 @@ img {
 
 .experience-section li::marker {
     color: #888;
-}
-
-.experience-section strong {
-    color: #333;
 }
 
 .experience-section code {
@@ -1102,7 +1098,7 @@ body.projects-body {
 .project-title {
     margin: 0;
     color: #f5f5f5;
-    font-size: clamp(1.25rem, 3vw, 2.6rem);
+    font-size: clamp(1.1rem, 2.5vw, 2rem);
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 600;
     letter-spacing: -0.045em;
