@@ -200,7 +200,7 @@ fetch("components/footer.html")
             links: [
                 {
                     label: "View GitHub Repository",
-                    url: "https://github.com/zuhamujib/ece552/ChampSim"
+                    url: "https://github.com/zuhamujib/Custom-branch-predictor-using-ChampSim "
                 }
             ]
         },
