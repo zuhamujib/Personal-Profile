@@ -77,14 +77,15 @@
                                 windows.
                             </li>
                             <li>
-                                Eliminated GPS tracking gaps caused by UART receive-buffer overflows by tracing a 3.9×
-                                increase in GPS checksum failures and increasing GNSS and BLE buffers from 256 to 1,024
-                                bytes, preventing mid-message data loss.
+                                Identified a 3.9x increase in UART failures across field devices by comparing logs
+                                using the firmware analysis tool. Analyzed the communication error patterns and traced
+                                the regression to UART receive-buffer limitations, and increased buffer capacity by 4×
+                                to prevent data loss.
                             </li>
                             <li>
-                                Resolved inaccurate GNSS hotstart failure reporting by identifying a counter that
-                                accumulated incorrectly across power cycles and validating the correction with unit
-                                testing, addressing inflated failure reporting affecting 11.59% of monitored devices.
+                                Improved firmware data accuracy by investigating inconsistencies in system counters,
+                                identifying underlying logic errors, and validating corrective changes through unit
+                                testing, addressing reporting inaccuracies affecting 11.59% of monitored devices.
                             </li>
                             <li>
                                 Expanded automated integration and hardware validation coverage by extending tests for
